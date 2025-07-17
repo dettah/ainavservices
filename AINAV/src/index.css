@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.carousel-wrapper .carousel .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-box-overlay {
+  background-color: rgba(47, 73, 110, 0.884) !important; /* #2f496e */
+}
+
+.image-box-overlay1 {
+  background-color: rgba(41, 136, 188, 0.295) !important; /* #2988bc */
+}
+
+.image-box-overlay2 {
+  background-color: rgba(237, 140, 114, 0.884) !important; /* #ed8c72 */
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide-left {
+  animation: slide-left 20s linear infinite;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
