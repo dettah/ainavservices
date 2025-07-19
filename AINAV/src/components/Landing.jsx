@@ -87,7 +87,7 @@ const Landing = () => {
   );
 
   return (
-    <div className="bg-[#f4eade] relative pt-24 md:pt-20">
+    <div className="bg-[#f4eade] relative pt-24 md:pt-20 w-full overflow-x-hidden">
       {/* Home (Carousel) Section */}
       <section id="home" className="relative w-[100vw] slide-up">
         <div className="relative w-full sm:h-[60vh] md:h-[80vh] overflow-y-hidden">
@@ -243,7 +243,7 @@ const Landing = () => {
             </ul>
           </div>
           {/* Project Image (Desktop) */}
-          <div className="hidden md:block md:w-2/3 border">
+          <div className="hidden md:block md:w-2/3 ">
             <div className="relative w-full h-[400px] bg-[#f4eade] rounded-lg border border-[#ed8c72] overflow-hidden box-hover ">
               <img
                 src={selectedProject.img}
@@ -287,7 +287,7 @@ const Landing = () => {
 
       {/* Clients Section */}
       <section id="clients" className="py-12 slide-up">
-        <h1 className="text-3xl font-bold text-center mb-14 text-[#2988bc]">Our Clients</h1>
+        <h1 className="text-3xl w-[100vw] font-bold text-center mb-14 text-[#2988bc]">Our Clients</h1>
         <ContinuousCarousel />
       </section>
 
