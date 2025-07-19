@@ -15,13 +15,16 @@ html {
 }
 
 .image-box-overlay1 {
-  background-color: rgba(41, 136, 188, 0.295) !important; /* #2988bc */
+  background-color: rgba(41, 136, 188, 0.884) !important; /* #2988bc */
 }
 
 .image-box-overlay2 {
   background-color: rgba(237, 140, 114, 0.884) !important; /* #ed8c72 */
 }
 
+.image-box-overlay-contact {
+  background-color: rgba(41, 136, 188, 0.637) !important; /* #2988bc */
+}
 @keyframes slide-left {
   0% {
     transform: translateX(0);
@@ -42,7 +45,7 @@ html {
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
+    opacity:  project-button-hover1;
   }
 }
 
@@ -55,4 +58,34 @@ html {
 .slide-up.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.box-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.box-hover:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-color: #2988bc;
+}
+
+.project-button-hover {
+  transition: all 0.3s ease;
+}
+
+.project-button-hover:hover {
+  transform: scale(1.03) translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ed8c72;
+  color: #f4eade;
+}
+
+.project-slide-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-slide-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

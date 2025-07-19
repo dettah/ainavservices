@@ -34,6 +34,7 @@ const Footer = () => {
                 { name: 'About Us', id: 'about' },
                 { name: 'Services', id: 'services' },
                 { name: 'Projects', id: 'projects' },
+                { name: 'Clients', id: 'clients' },
                 { name: 'Contact', id: 'contact' },
               ].map((item) => (
                 <li key={item.name}>
@@ -49,14 +50,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex flex-col items-center sm:items-start ">
+          <div className="flex flex-col items-center sm:items-start">
             <h3 className="text-lg font-bold mb-4 text-[#f4eade]">Contact Us</h3>
             <p className="text-sm text-[#2988bc] text-center sm:text-left">
-              1234 Street Name, City, Country
+              121, Nwaniba Road, Uyo, Akwa Ibom State, Nigeria
               <br />
-              Email: <a href="mailto:contact@ainav.com" className="text-[#2988bc] hover:text-[#ed8c72] transition-colors duration-200">contact@ainav.com</a>
+              Email: <a href="mailto:contact@ainavservices.com" className="text-[#2988bc] hover:text-[#ed8c72] transition-colors duration-200">contact@ainavservices.com</a>
               <br />
-              Phone: <a href="tel:+1234567890" className="text-[#2988bc] hover:text-[#ed8c72] transition-colors duration-200">+123 456 7890</a>
+              Phone: <a href="tel:+1234567890" className="text-[#2988bc] hover:text-[#ed8c72] transition-colors duration-200">+234 806 447 6373</a>
             </p>
           </div>
 

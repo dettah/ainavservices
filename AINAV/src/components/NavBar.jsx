@@ -45,9 +45,9 @@ const NavBar = () => {
 
   return (
     <>
-      {/* <div className="h-20 hidden md:flex items-center justify-between py-3 px-8 bg-[#f4eade]">
+      <div className="h-20 hidden md:flex items-center justify-between py-3 px-8 bg-[#f4eade]">
         <img src={Logo} alt="Company Logo" className="h-full" />
-      </div> */}
+      </div>
 
       <nav className="fixed top-0 z-50 w-full bg-[#2f496e] shadow-md transition-all duration-300 ease-in-out">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,6 +62,7 @@ const NavBar = () => {
                 { name: 'About Us', id: 'about' },
                 { name: 'Services', id: 'services' },
                 { name: 'Projects', id: 'projects' },
+                { name: 'Clients', id: 'clients' },
                 { name: 'Contact', id: 'contact' },
               ].map((item, index) => (
                 <a
@@ -149,6 +150,7 @@ const NavBar = () => {
               { name: 'About Us', id: 'about' },
               { name: 'Services', id: 'services' },
               { name: 'Projects', id: 'projects' },
+              { name: 'Clients', id: 'clients' },
               { name: 'Contact', id: 'contact' },
             ].map((item) => (
               <a
