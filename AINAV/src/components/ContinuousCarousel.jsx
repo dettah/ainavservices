@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
-import CarouselImg1 from '../assets/carousel1.jpg';
-import CarouselImg2 from '../assets/carousel2.jpg';
-import CarouselImg3 from '../assets/carousel3.jpg';
-import CarouselImg4 from '../assets/survLogo.jpg';
 
+import Client1 from "../assets/clients/BLACKROSE.jpg"
+import Client2 from "../assets/clients/Fol_logo.png"
+import Client3 from "../assets/clients/MNDA.jpg"
+import Client4 from "../assets/clients/POWER_GAS.png"
+import Client5 from "../assets/clients/SAHARA.jpg"
 
 const ContinuousCarousel = () => {
   const carouselRef = useRef(null);
@@ -21,10 +22,11 @@ const ContinuousCarousel = () => {
   };
 
   const slides = [
-    { img: CarouselImg4, title: 'Feature 1', desc: 'Discover our amazing feature one.' },
-    { img: CarouselImg4, title: 'Feature 2', desc: 'Explore the power of feature two.' },
-    { img: CarouselImg4, title: 'Feature 3', desc: 'Unleash creativity with feature three.' },
-    { img: CarouselImg4, title: 'Feature 4', desc: 'Experience the innovation of feature four.' },
+    { img: Client1, title: 'Feature 1', desc: 'Discover our amazing feature one.' },
+    { img: Client2, title: 'Feature 2', desc: 'Explore the power of feature two.' },
+    { img: Client3, title: 'Feature 3', desc: 'Unleash creativity with feature three.' },
+    { img: Client4, title: 'Feature 4', desc: 'Experience the innovation of feature four.' },
+    { img: Client5, title: 'Feature 4', desc: 'Experience the innovation of feature four.' },
   ];
 
   return (
@@ -43,7 +45,7 @@ const ContinuousCarousel = () => {
         {slides.concat(slides).map((slide, index) => (
           <div
             key={index}
-            className=" w-[20px] h-full bg-contain bg-center bg-no-repeat"
+            className="  h-[70px] bg-contain bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${slide.img})`, flex: `0 0 ${100 / slides.length}%` }}
           >
             {/* <div className="relative z-10 flex items-center justify-center h-full">

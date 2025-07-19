@@ -1,57 +1,78 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import caro_land1 from "../assets/hero-carousel/ONE.jpg"
+import caro_land2 from "../assets/hero-carousel/TWO.png"
+import caro_land3 from "../assets/hero-carousel/THREE.png"
+import caro_land4 from "../assets/hero-carousel/FOUR.jpeg"
+import caro_land5 from "../assets/hero-carousel/FIVE.png"
+import caro_land6 from "../assets/hero-carousel/SIX.jpg"
+import hero_card3 from "../assets/hero-cards/ENGINEERING.jpg"
+import hero_card2 from "../assets/hero-cards/ENVIRONMENT.jpg"
+import hero_card1 from "../assets/hero-cards/SURVEY.jpg"
+import service1 from "../assets/services/MET3.jpg"
+import service2 from "../assets/services/GEOPHYSICAL.jpg"
+import service3 from "../assets/services/GEOTECHNICAL.png"
+import service4 from "../assets/services/GROUND_SURVEY.jpg"
+import service5 from "../assets/services/RIGS.jpeg"
+import service6 from "../assets/services/hydro.jpg"
+
+
+
+
+import ContinuousCarousel from './ContinuousCarousel';
+
+
 import CarouselImg1 from '../assets/carousel1.jpg';
 import CarouselImg2 from '../assets/carousel2.jpg';
 import CarouselImg3 from '../assets/carousel3.jpg';
 import CarouselImg4 from '../assets/carousel4.jpg';
 import LandscapePhoto from '../assets/landscapePhoto.jpg';
 import Survey from '../assets/survey.jpg';
-import ContinuousCarousel from './ContinuousCarousel';
 
 const Landing = () => {
   const boxes = [
     {
-      img: CarouselImg1,
+      img: service6,
       title: ' Hydrographic Surveys',
       desc: 'Precise mapping of seabeds, rivers, and coastal zones to support marine construction, navigation, and offshore exploration',
     },
-    { img: CarouselImg2, title: 'Geophysical Surveys', desc: 'Subsurface investigation using advanced technologies to detect geological structures critical for engineering and resource development' },
-    { img: CarouselImg3, title: 'Geotechnical Site Surveys', desc: 'Comprehensive soil and ground condition assessments for safe, stable, and cost-effective foundation design' },
-    { img: CarouselImg4, title: 'Metocean Surveys', desc: 'Real-time data collection on weather and ocean conditions to guide marine operations and support environmental compliance' },
-    { img: CarouselImg1, title: 'Positioning & Navigation', desc: 'High-precision positioning services for rigs, barges, and VSP operations—ensuring accuracy in offshore and subsea activities' },
-    { img: CarouselImg2, title: 'Remote Sensing & Ground Surveys', desc: 'Integrated aerial and terrestrial data capture for large-scale mapping, terrain modeling, and infrastructure planning' },
+    { img: service2, title: 'Geophysical Surveys', desc: 'Subsurface investigation using advanced technologies to detect geological structures critical for engineering and resource development' },
+    { img: service3, title: 'Geotechnical Site Surveys', desc: 'Comprehensive soil and ground condition assessments for safe, stable, and cost-effective foundation design' },
+    { img: service1, title: 'Metocean Surveys', desc: 'Real-time data collection on weather and ocean conditions to guide marine operations and support environmental compliance' },
+    { img: service5, title: 'Positioning & Navigation', desc: 'High-precision positioning services for rigs, barges, and VSP operations—ensuring accuracy in offshore and subsea activities' },
+    { img: service4, title: 'Remote Sensing & Ground Surveys', desc: 'Integrated aerial and terrestrial data capture for large-scale mapping, terrain modeling, and infrastructure planning' },
   ];
 
   const projects = [
     {
       id: 1,
-      title: 'Coastal Survey',
-      desc: 'Precision surveying for coastal infrastructure development.',
+      title: 'Shoreline Monitoring & Protection – Ikot Abasi, Akwa Ibom',
+      desc: 'Shoreline Survey for monitoring and protecting a section of the shoreline in Ikot Abasi Village, Ikot Abasi L.G.A, Akwa Ibom State for Ministry of Niger Delta Affairs.',
       img: CarouselImg1,
     },
     {
       id: 2,
-      title: 'Urban Planning',
-      desc: 'Innovative solutions for sustainable city growth.',
+      title: 'Geophysical & Bathymetric Survey – Qua Iboe Export Hub, Akwa Ibom',
+      desc: 'Geophysical and Bathymetric Survey of Qua Iboe Export Hub in Liberty Free Trade Zone, Akwa Ibom State for BLACKROSE Chemicals Limited.',
       img: CarouselImg2,
     },
     {
       id: 3,
-      title: 'Oil & Gas Exploration',
-      desc: 'Advanced surveying for offshore energy projects.',
+      title: 'Geotechnical Survey & Site Setting – Gas Compression Plant, Delta State',
+      desc: 'Geotechnical survey and setting out of all facilities and foundation structures of Natural gas compression plant in Ebedei Delta state for power Gas Nigeria .',
       img: CarouselImg3,
     },
     {
       id: 4,
-      title: 'Environmental Assessment',
-      desc: 'Comprehensive environmental impact studies.',
+      title: 'Topographic Survey – Early Production Facility, Esit Eket, Akwa Ibom',
+      desc: 'Topographic Survey of Early Production Facility Site at Edo, Esit Eket, Akwa Ibom State for Frontier Oil Limited.',
       img: CarouselImg4,
     },
     {
       id: 5,
-      title: 'Environmental Assessment',
-      desc: 'Comprehensive environmental impact studies.',
+      title: 'Post-Dredging Bathymetric Survey – NAOC Jetty, Brass, Bayelsa',
+      desc: 'Post-dredged bathymetric survey of Nigerian Agip Oil Company (NAOC) Jetty, Brass, Bayelsa State.',
       img: CarouselImg4,
     },
   ];
@@ -87,10 +108,10 @@ const Landing = () => {
   );
 
   return (
-    <div className="bg-[#f4eade] relative pt-24 md:pt-20 w-full overflow-x-hidden">
+    <div className="bg-[#f4eade] relative pt-24 md:pt-0 w-full overflow-x-hidden">
       {/* Home (Carousel) Section */}
       <section id="home" className="relative w-[100vw] slide-up">
-        <div className="relative w-full sm:h-[60vh] md:h-[80vh] overflow-y-hidden">
+        <div className="relative w-full sm:h-[60vh] md:h-[95vh] overflow-y-hidden">
           <Carousel
             autoPlay
             interval={1000}
@@ -105,28 +126,42 @@ const Landing = () => {
             className="carousel-wrapper"
           >
             <div>
-              <img src={CarouselImg1} alt="Slide 1: Feature 1" className="w-full h-full object-cover" />
+              <img src={caro_land1} alt="Slide 1: Feature 1" className="w-full object-cover" />
               <div className="absolute bottom-4 left-4 text-[#f4eade]">
                 <h2 className="text-2xl md:text-3xl font-bold">Feature 1</h2>
                 <p className="text-sm md:text-base">Discover our amazing feature one.</p>
               </div>
             </div>
             <div>
-              <img src={CarouselImg4} alt="Slide 4: Feature 4" className="h-full object-cover" />
+              <img src={caro_land2} alt="Slide 4: Feature 4" className="w-full object-cover" />
               <div className="absolute bottom-4 left-4 text-[#f4eade]">
                 <h2 className="text-2xl md:text-3xl font-bold">Feature 4</h2>
                 <p className="text-sm md:text-base">Experience the innovation of feature four.</p>
               </div>
             </div>
             <div>
-              <img src={CarouselImg2} alt="Slide 2: Feature 2" className="h-full object-cover" />
+              <img src={caro_land3} alt="Slide 2: Feature 2" className="h-full object-cover" />
               <div className="absolute bottom-4 left-4 text-[#f4eade]">
                 <h2 className="text-2xl md:text-3xl font-bold">Feature 2</h2>
                 <p className="text-sm md:text-base">Explore the power of feature two.</p>
               </div>
             </div>
             <div>
-              <img src={CarouselImg3} alt="Slide 3: Feature 3" className="h-full object-cover" />
+              <img src={caro_land4} alt="Slide 3: Feature 3" className="h-full object-cover" />
+              <div className="absolute bottom-4 left-4 text-[#f4eade]">
+                <h2 className="text-2xl md:text-3xl font-bold">Feature 3</h2>
+                <p className="text-sm md:text-base">Unleash creativity with feature three.</p>
+              </div>
+            </div>
+            <div>
+              <img src={caro_land5} alt="Slide 3: Feature 3" className="h-full object-cover" />
+              <div className="absolute bottom-4 left-4 text-[#f4eade]">
+                <h2 className="text-2xl md:text-3xl font-bold">Feature 3</h2>
+                <p className="text-sm md:text-base">Unleash creativity with feature three.</p>
+              </div>
+            </div>
+            <div>
+              <img src={caro_land6} alt="Slide 3: Feature 3" className="h-full object-cover" />
               <div className="absolute bottom-4 left-4 text-[#f4eade]">
                 <h2 className="text-2xl md:text-3xl font-bold">Feature 3</h2>
                 <p className="text-sm md:text-base">Unleash creativity with feature three.</p>
@@ -135,10 +170,23 @@ const Landing = () => {
           </Carousel>
         </div>
 
-        <div className="mx-auto px-4 sm:px-6 lg:px-8 py-8 hidden h-fit w-[100vw] absolute bottom-0 transform translate-y-3/4 md:flex justify-center gap-4">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 py-8 hidden h-fit w-[100vw] absolute bottom-0 transform translate-y-1/2 md:flex justify-center gap-4">
+
           <div
             className="relative w-full h-[300px] md:h-[300px] bg-cover bg-center"
-            style={{ backgroundImage: `url(${CarouselImg1})` }}
+            style={{ backgroundImage: `url(${hero_card1})` }}
+          >
+            <div className="absolute inset-0 bg-[#2f496e] image-box-overlay1"></div>
+            <div className="relative z-10 flex items-center justify-center h-full">
+              <div className="text-center text-[#f4eade] px-4">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Survey</h2>
+                <p className="text-sm sm:text-base md:text-lg">Precision-driven surveys for smarter decisions and lasting impact.</p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="relative w-full h-[300px] md:h-[300px] bg-cover bg-center"
+            style={{ backgroundImage: `url(${hero_card2})` }}
           >
             <div className="absolute inset-0 bg-[#2f496e] image-box-overlay"></div>
             <div className="relative z-10 flex items-center justify-center h-full">
@@ -150,9 +198,9 @@ const Landing = () => {
           </div>
           <div
             className="relative w-full h-[300px] md:h-[300px] bg-cover bg-center"
-            style={{ backgroundImage: `url(${CarouselImg1})` }}
+            style={{ backgroundImage: `url(${hero_card3})` }}
           >
-            <div className="absolute inset-0 bg-[#2f496e] image-box-overlay1"></div>
+            <div className="absolute inset-0 bg-[#2f496e] image-box-overlay2"></div>
             <div className="relative z-10 flex items-center justify-center h-full">
               <div className="text-center text-[#f4eade] px-4">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Engineering</h2>
@@ -160,18 +208,7 @@ const Landing = () => {
               </div>
             </div>
           </div>
-          <div
-            className="relative w-full h-[300px] md:h-[300px] bg-cover bg-center"
-            style={{ backgroundImage: `url(${CarouselImg1})` }}
-          >
-            <div className="absolute inset-0 bg-[#2f496e] image-box-overlay2"></div>
-            <div className="relative z-10 flex items-center justify-center h-full">
-              <div className="text-center text-[#f4eade] px-4">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Survey</h2>
-                <p className="text-sm sm:text-base md:text-lg">Precision-driven surveys for smarter decisions and lasting impact.</p>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -183,12 +220,14 @@ const Landing = () => {
         <div className="md:flex justify-center hidden sm:pl-6 md:pl-2 w-full md:w-fit">
           <img src={Survey} alt="About AINAV image" className="rounded md:h-[75vh]" />
         </div>
-        <div className="flex flex-col md:w-[50%] pl-6 space-y-6">
+        <div className="flex flex-col md:w-[50%] pl-6 space-y-4">
           <h1 className="text-[#2988bc] text-2xl md:text-5xl font-bold mt-10">About AINAV</h1>
-          <p className="leading-8 pr-6 text-[#2f496e]">
-          <strong>AINAV</strong> Services Limited is a Nigerian-owned company delivering cutting-edge Surveying, Engineering, and Environmental solutions. Backed by nearly a decade of experience, our team of skilled professionals combines innovation with precision to serve key industries—oil, gas, marine construction, civil engineering and dredging. <br /><br />
-
-            From onshore to offshore, we deploy advanced technology and local expertise to execute projects of any scale. <br /><br /> At <strong>AINAV</strong>, we don’t just meet standards—we set them.
+          <p className="leading-7 pr-6  text-[#2f496e]">
+            <strong>AINAV</strong> Services Limited is a Nigerian-owned company delivering cutting-edge Surveying, Engineering, and Environmental solutions. Backed by nearly a decade of experience, our team of skilled professionals combines innovation with precision to serve key industries—oil, gas, marine construction, civil engineering and dredging. <br />
+          </p>
+          <p className="leading-7 pr-6 text-[#2f496e]">From onshore to offshore, we deploy advanced technology and local expertise to execute projects of any scale. <br /></p>
+          <p className="leading-7 pr-6 text-[#2f496e]">
+            At <strong>AINAV</strong>, we don’t just meet standards—we set them.
           </p>
           <div className="flex space-x-2">
             <button className="bg-[#2988bc] text-[#f4eade] rounded h-10 md:h-14 w-32 cursor-pointer hover:bg-[#ed8c72] transition-all ease-in-out duration-200">
@@ -222,17 +261,17 @@ const Landing = () => {
       {/* Projects Section */}
       <section id="projects" className="px-4 sm:px-6 md:px-8 py-8 md:py-20 slide-up">
         <h1 className="text-2xl md:text-5xl font-bold text-center mb-16 text-[#2988bc]">Projects</h1>
-        <div className="md:flex md:flex-row md:space-x-8 ">
+        <div className="md:flex  md:flex-row md:space-x-8 ">
           {/* Project List (Desktop) */}
-          <div className="hidden md:block md:w-1/3 max-h-[500px]  overflow-y-hidden ">
+          <div className="hidden md:block md:w-1/3 max-h-[500px]  overflow-y-scroll ">
             <ul className="space-y-4">
               {projects.map((project) => (
                 <li key={project.id}>
                   <button
                     onClick={() => setSelectedProject(project)}
                     className={`w-full text-left p-4 rounded-lg project-button-hover ${selectedProject.id === project.id
-                        ? 'bg-[#2988bc] text-[#f4eade]'
-                        : 'bg-[#f4eade] text-[#2f496e]'
+                      ? 'bg-[#2988bc] text-[#f4eade]'
+                      : 'bg-[#f4eade] text-[#2f496e]'
                       }`}
                   >
                     <h2 className="text-lg md:text-xl font-bold">{project.title}</h2>
@@ -243,8 +282,8 @@ const Landing = () => {
             </ul>
           </div>
           {/* Project Image (Desktop) */}
-          <div className="hidden md:block md:w-2/3 ">
-            <div className="relative w-full h-[400px] bg-[#f4eade] rounded-lg border border-[#ed8c72] overflow-hidden box-hover ">
+          <div className="hidden md:flex md:items-center  md:w-2/3 ">
+            <div className="relative w-full h-[400px] bg-[#f4eade] py-auto rounded-lg border border-[#ed8c72] overflow-hidden box-hover ">
               <img
                 src={selectedProject.img}
                 alt={selectedProject.title}
@@ -288,7 +327,9 @@ const Landing = () => {
       {/* Clients Section */}
       <section id="clients" className="py-12 slide-up">
         <h1 className="text-3xl w-[100vw] font-bold text-center mb-14 text-[#2988bc]">Our Clients</h1>
-        <ContinuousCarousel />
+        <div className='h-full '>
+          <ContinuousCarousel />
+        </div>
       </section>
 
       {/* Contact Section */}

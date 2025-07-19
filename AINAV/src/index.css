@@ -11,15 +11,15 @@ html {
 }
 
 .image-box-overlay {
-  background-color: rgba(47, 73, 110, 0.884) !important; /* #2f496e */
+  background-color: rgba(47, 73, 110, 0.726) !important; /* #2f496e */
 }
 
 .image-box-overlay1 {
-  background-color: rgba(41, 136, 188, 0.884) !important; /* #2988bc */
+  background-color: rgba(41, 136, 188, 0.664) !important; /* #2988bc */
 }
 
 .image-box-overlay2 {
-  background-color: rgba(237, 140, 114, 0.884) !important; /* #ed8c72 */
+  background-color: rgba(237, 141, 114, 0.733) !important; /* #ed8c72 */
 }
 
 .image-box-overlay-contact {
