@@ -16,17 +16,16 @@ import service3 from "../assets/services/GEOTECHNICAL.png"
 import service4 from "../assets/services/GROUND_SURVEY.jpg"
 import service5 from "../assets/services/RIGS.jpeg"
 import service6 from "../assets/services/hydro.jpg"
-
+import shoreline from "../assets/project/shorelinetry.jpg"
+import facilities from "../assets/project/facilities.jpg"
+import facilities1 from "../assets/project/facilities1.jpg"
+import facilities2 from "../assets/project/FACILITY_FOUNDATION.jpg"
+import bathymetric from "../assets/project/bathymetric.png"
+import rose from "../assets/project/rose.jpg"
 
 
 
 import ContinuousCarousel from './ContinuousCarousel';
-
-
-import CarouselImg1 from '../assets/carousel1.jpg';
-import CarouselImg2 from '../assets/carousel2.jpg';
-import CarouselImg3 from '../assets/carousel3.jpg';
-import CarouselImg4 from '../assets/carousel4.jpg';
 import LandscapePhoto from '../assets/landscapePhoto.jpg';
 import Survey from '../assets/survey.jpg';
 
@@ -49,31 +48,31 @@ const Landing = () => {
       id: 1,
       title: 'Shoreline Monitoring & Protection – Ikot Abasi, Akwa Ibom',
       desc: 'Shoreline Survey for monitoring and protecting a section of the shoreline in Ikot Abasi Village, Ikot Abasi L.G.A, Akwa Ibom State for Ministry of Niger Delta Affairs.',
-      img: CarouselImg1,
+      img: shoreline,
     },
     {
       id: 2,
       title: 'Geophysical & Bathymetric Survey – Qua Iboe Export Hub, Akwa Ibom',
       desc: 'Geophysical and Bathymetric Survey of Qua Iboe Export Hub in Liberty Free Trade Zone, Akwa Ibom State for BLACKROSE Chemicals Limited.',
-      img: CarouselImg2,
+      img: rose,
     },
     {
       id: 3,
       title: 'Geotechnical Survey & Site Setting – Gas Compression Plant, Delta State',
       desc: 'Geotechnical survey and setting out of all facilities and foundation structures of Natural gas compression plant in Ebedei Delta state for power Gas Nigeria .',
-      img: CarouselImg3,
+      img: facilities2,
     },
     {
       id: 4,
       title: 'Topographic Survey – Early Production Facility, Esit Eket, Akwa Ibom',
       desc: 'Topographic Survey of Early Production Facility Site at Edo, Esit Eket, Akwa Ibom State for Frontier Oil Limited.',
-      img: CarouselImg4,
+      img: facilities1,
     },
     {
       id: 5,
       title: 'Post-Dredging Bathymetric Survey – NAOC Jetty, Brass, Bayelsa',
       desc: 'Post-dredged bathymetric survey of Nigerian Agip Oil Company (NAOC) Jetty, Brass, Bayelsa State.',
-      img: CarouselImg4,
+      img: bathymetric,
     },
   ];
 
@@ -106,6 +105,20 @@ const Landing = () => {
       </svg>
     </button>
   );
+
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const offset = window.innerWidth >= 768 ? 116 : 64; // 20px (spacer) + 64px (nav)
+      const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: sectionPosition - offset,
+        behavior: 'smooth',
+      });
+    }
+  };
+
 
   return (
     <div className="bg-[#f4eade] relative pt-24 md:pt-0 w-full overflow-x-hidden">
@@ -186,6 +199,18 @@ const Landing = () => {
           </div>
           <div
             className="relative w-full h-[300px] md:h-[300px] bg-cover bg-center"
+            style={{ backgroundImage: `url(${hero_card3})` }}
+          >
+            <div className="absolute inset-0 bg-[#2f496e] image-box-overlay2"></div>
+            <div className="relative z-10 flex items-center justify-center h-full">
+              <div className="text-center text-[#f4eade] px-4">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Construction</h2>
+                <p className="text-sm sm:text-base md:text-lg">Innovative engineering solutions built for performance and the future.</p>
+              </div>
+            </div>
+          </div>
+          <div
+            className="relative w-full h-[300px] md:h-[300px] bg-cover bg-center"
             style={{ backgroundImage: `url(${hero_card2})` }}
           >
             <div className="absolute inset-0 bg-[#2f496e] image-box-overlay"></div>
@@ -196,24 +221,50 @@ const Landing = () => {
               </div>
             </div>
           </div>
-          <div
-            className="relative w-full h-[300px] md:h-[300px] bg-cover bg-center"
-            style={{ backgroundImage: `url(${hero_card3})` }}
-          >
-            <div className="absolute inset-0 bg-[#2f496e] image-box-overlay2"></div>
-            <div className="relative z-10 flex items-center justify-center h-full">
-              <div className="text-center text-[#f4eade] px-4">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Engineering</h2>
-                <p className="text-sm sm:text-base md:text-lg">Innovative engineering solutions built for performance and the future.</p>
-              </div>
-            </div>
-          </div>
+          
 
         </div>
       </section>
 
       {/* About Section */}
       <section
+        id="about"
+        className="px-4 sm:px-6 md:px-8 md:flex md:flex-row md:items-center flex flex-col items-center justify-center pt-4 md:pt-48 md:mt-18 space-y-6 md:space-y-0 md:space-x-12 slide-up pb-25"
+      >
+        <div className="md:flex justify-center hidden sm:pl-6 md:pl-2 w-full md:w-fit">
+          <img src={Survey} alt="About AINAV image" className="rounded md:h-[75vh]" />
+        </div>
+        <div className="flex flex-col md:w-[50%] pl-6 space-y-4">
+          <h1 className="text-[#2988bc] text-2xl md:text-5xl font-bold mt-10">About AINAV</h1>
+          <p className="leading-7 pr-6 text-[#2f496e]">
+            <strong>AINAV</strong> Services Limited is a Nigerian-owned company delivering cutting-edge Surveying, Engineering, and Environmental solutions. Backed by nearly a decade of experience, our team of skilled professionals combines innovation with precision to serve key industries—oil, gas, marine construction, civil engineering and dredging. <br />
+          </p>
+          <p className="leading-7 pr-6 text-[#2f496e]">
+            From onshore to offshore, we deploy advanced technology and local expertise to execute projects of any scale. <br />
+          </p>
+          <p className="leading-7 pr-6 text-[#2f496e]">
+            At <strong>AINAV</strong>, we don’t just meet standards—we set them.
+          </p>
+          <div className="flex space-x-2">
+            <button
+              onClick={(e) => handleNavClick(e, 'services')}
+              className="bg-[#2988bc] text-[#f4eade] rounded h-10 md:h-14 w-32 cursor-pointer hover:bg-[#ed8c72] transition-all ease-in-out duration-200"
+            >
+              Learn More
+            </button>
+            <button
+              onClick={(e) => handleNavClick(e, 'contact')}
+              className="border-2 border-[#ed8c72] text-[#2988bc] cursor-pointer rounded h-10 md:h-14 w-32 hover:bg-[#ed8c72] hover:text-[#f4eade] hover:border-none transition-all ease-in-out duration-200"
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* <section
         id="about"
         className="px-4 sm:px-6 md:px-8 md:flex md:flex-row md:items-center flex flex-col items-center justify-center pt-4 md:pt-48 md:mt-18 space-y-6 md:space-y-0 md:space-x-12 slide-up pb-25"
       >
@@ -238,7 +289,7 @@ const Landing = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services Section */}
       <section id="services" className="px-4 sm:px-6 md:px-8 py-8 md:py-20 bg-white slide-up">
