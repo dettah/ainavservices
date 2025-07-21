@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/survLogo.jpg';
+import Logo from '../assets/ainav_logo.jpg';
 
 const Footer = () => {
   const handleNavClick = (e, sectionId) => {
